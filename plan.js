@@ -1,4 +1,5 @@
-// plan.js：一条事务要重发几条（基线：一律给零）
+// plan.js：一条事务还缺几个确认（参与者总数减已确认人数）
 export function needResend(participants, acks) {
-  return 0;
+  const confirmed = Array.isArray(acks) ? acks.length : 0;
+  return participants - confirmed;
 }
