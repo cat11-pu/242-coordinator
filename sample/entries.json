@@ -1,0 +1,11 @@
+{
+  "participant_error_code": "E_BAD_PARTICIPANT",
+  "entry_error_code": "E_BAD_ENTRY",
+  "participants": 3,
+  "budget": 1,
+  "entries": [
+    { "decision": "提交", "acks": [1] },
+    { "decision": "", "acks": [] },
+    { "decision": "回滚", "acks": [1, 2, 3] }
+  ]
+}
